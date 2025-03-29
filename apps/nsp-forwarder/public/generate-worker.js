@@ -45,6 +45,7 @@ onmessage = (e) => {
 		FS.writeFile('/logo/StartupMovie.gif', startupMovie);
 
 		FS.mkdir('/romfs');
+		console.log(`Next Argv: ${nextArgv}`);
 		FS.writeFile('/romfs/nextArgv', nextArgv);
 		FS.writeFile('/romfs/nextNroPath', nextNroPath);
 

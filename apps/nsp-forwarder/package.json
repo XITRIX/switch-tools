@@ -1,9 +1,9 @@
 {
   "name": "nsp-forwarder",
   "private": true,
-  "version": "0.0.4",
+  "version": "0.0.5",
   "type": "module",
-  "description": "Nintendo Switch NSP forwarder web application",
+  "description": "Nintendo Switch NSP forwarder web application + Moonlight support",
   "author": "Nathan Rajlich <n@n8.io>",
   "license": "MIT",
   "scripts": {

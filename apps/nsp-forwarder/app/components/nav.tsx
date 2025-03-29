@@ -37,6 +37,16 @@ export function Nav({ advancedMode }: NavProps) {
 				<NavigationMenu.Item>
 					<NavLink
 						className="NavigationMenuLink"
+						to={`/moonlight${search}`}
+						preventScrollReset
+					>
+						Moonlight Forwarder
+					</NavLink>
+				</NavigationMenu.Item>
+
+				<NavigationMenu.Item>
+					<NavLink
+						className="NavigationMenuLink"
 						to={`/retroarch${search}`}
 						preventScrollReset
 					>

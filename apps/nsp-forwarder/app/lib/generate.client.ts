@@ -15,6 +15,7 @@ interface GenerateParams {
 	enableSvcDebug?: boolean;
 	logoType?: number;
 	romPath?: string;
+	nextArguments?: string;
 	logo?: Blob;
 	startupMovie?: Blob;
 }
@@ -67,6 +68,7 @@ export async function generateNsp({
 	enableSvcDebug,
 	logoType,
 	romPath,
+	nextArguments,
 	logo,
 	startupMovie,
 }: GenerateParams): Promise<File> {
@@ -107,6 +109,12 @@ export async function generateNsp({
 	if (typeof romPath === 'string') {
 		nextArgv += ` "sdmc:${romPath}"`;
 	}
+
+	if (typeof nextArguments === 'string') {
+		nextArgv += ` ${nextArguments}`;
+	}
+
+	console.log(`"Arguments: ${nextArgv}"`);
 
 	const [keysData, imageData, logoData, startupMovieData, main, mainNpdm] =
 		await Promise.all([
